@@ -6,13 +6,15 @@ const visions = [
   {
     icon: Lightbulb,
     title: "Vision 1",
-    statement: "To build smart business solutions for ageing businesses and ignite growth in the business world.",
+    statement:
+      "To build smart business solutions for ageing businesses and ignite growth in the business world.",
     gradient: "from-primary to-accent",
   },
   {
     icon: Rocket,
     title: "Vision 2",
-    statement: "Becoming the best tech-driven company and exploring opportunities to stand out through professionalism and growth.",
+    statement:
+      "Becoming the best tech-driven company and exploring opportunities to stand out through professionalism and growth.",
     gradient: "from-accent to-primary",
   },
 ];
@@ -70,7 +72,7 @@ const VisionSection = () => {
             Driving <span className="gradient-text">Future Growth</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Our vision guides every decision we make, pushing us to innovate and 
+            Our vision guides every decision we make, pushing us to innovate and
             create lasting impact in the tech industry.
           </p>
         </TextReveal>
@@ -101,7 +103,7 @@ const VisionSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 rounded-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-sm"
               />
-              
+
               <div className="relative glass-card p-8 md:p-10 h-full overflow-hidden">
                 {/* Background Glow */}
                 <motion.div
@@ -139,7 +141,7 @@ const VisionSection = () => {
                   transition={{ delay: 0.4 }}
                   className="relative text-xl md:text-2xl font-medium leading-relaxed text-foreground"
                 >
-                  "{vision.statement}"
+                  {vision.statement}
                 </motion.p>
               </div>
             </motion.div>

@@ -1,4 +1,11 @@
-import { Heart, Linkedin, Facebook, Instagram, Twitter, ArrowUp } from "lucide-react";
+import {
+  Heart,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Twitter,
+  ArrowUp,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -70,11 +77,15 @@ const Footer = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center"
               >
-                <span className="text-xl font-bold text-primary-foreground">C9</span>
+                <span className="text-xl font-bold text-primary-foreground">
+                  C9
+                </span>
               </motion.div>
               <div>
                 <h3 className="font-bold text-lg">Cheap9ja Smart Tech</h3>
-                <p className="text-sm text-background/60">Digital Solutions Partner</p>
+                <p className="text-sm text-background/60">
+                  Digital Solutions Partner
+                </p>
               </div>
             </motion.div>
             <p className="text-background/70 text-sm leading-relaxed">
@@ -146,7 +157,7 @@ const Footer = () => {
               transition={{ duration: 2, repeat: Infinity }}
               className="text-sm text-background/60 flex items-center gap-1"
             >
-              Made with <Heart className="w-4 h-4 text-destructive fill-destructive" /> in Nigeria
+              Cheap9ja Smart Tech
             </motion.p>
           </div>
         </motion.div>
@@ -155,8 +166,8 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: showScrollTop ? 1 : 0, 
+        animate={{
+          opacity: showScrollTop ? 1 : 0,
           scale: showScrollTop ? 1 : 0,
           y: showScrollTop ? 0 : 20,
         }}
