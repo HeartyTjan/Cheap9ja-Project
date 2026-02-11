@@ -33,6 +33,13 @@ const Footer = () => {
     { name: "Connect", href: "#social" },
   ];
 
+  const platformLinks = [
+    { name: "Sabipromote", href: "https://sabipromote.com.ng/" },
+    { name: "SabiRecruit", href: "https://sabirecruit.sabipromote.com.ng/" },
+    { name: "Sabistore", href: "https://sabistores.sabipromote.com.ng/" },
+    { name: "Pingtikapp", href: "https://pingtik.com/" },
+  ];
+
   const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -64,7 +71,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
         >
           {/* Brand */}
           <div>
@@ -103,6 +110,29 @@ const Footer = () => {
                 <motion.a
                   key={link.name}
                   href={link.href}
+                  whileHover={{ x: 5, color: "hsl(var(--primary))" }}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-background/70 transition-colors text-sm"
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Our Platforms */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Our Platforms</h4>
+            <nav className="flex flex-col gap-2">
+              {platformLinks.map((link, index) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ x: 5, color: "hsl(var(--primary))" }}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
